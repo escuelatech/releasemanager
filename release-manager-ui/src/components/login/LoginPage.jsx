@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../common/Layout';
 import useForm from '../customHook/useForm';
+import {Link} from 'react-router-dom';  
 
 const LoginPage = () => {
 
-    const {inputs, errors, handleLoginChange, handleLoginSubmit} = useForm({
+    const {inputs, errors, handleLoginChange, handleLoginSubmit,handleAppRegistration} = useForm({
         email: '',
         password: ''
     })
@@ -43,7 +44,8 @@ const LoginPage = () => {
                             <br />
                             <button type="submit" class="btn btn-primary">Login</button>
                         </form>
-                    </div>
+                    </div><br />
+                       <button type="submit" className="btn btn-success" onClick={handleAppRegistration}>Register Application Here</button>
                 </div>
             </Layout>
         </div>
