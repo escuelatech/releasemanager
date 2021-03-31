@@ -34,6 +34,11 @@ const useForm = (initialValues) => {
         history.push('/dashboard');
     }
 
+    const handleAppRegistration = (e) => {
+        e.preventDefault();
+        history.push('/appregister');
+    }
+
     const handleLoginChange = (e) => {
         const {name, value} = e.target;
         switch(name) {
@@ -75,7 +80,7 @@ const useForm = (initialValues) => {
         setInputs({...errors, ...inputs, [name]: value})
     }
 
-    return {handleLoginChange, handleLoginSubmit, handleWizardChange, inputs, errors, step, nextStep, prevStep, history};
+    return {handleLoginChange, handleLoginSubmit, handleWizardChange, handleAppRegistration, inputs, errors, step, nextStep, prevStep, history};
 };
 
 export default useForm;
