@@ -6,6 +6,8 @@ import LoginPage from "./components/login/LoginPage";
 import MainPage from "./components/wizard/MainPage";
 import SuccessMessage from "./components/wizard/SuccessMessage";
 import AppRegistration from "./components/appregistration/AppRegistrationPage.jsx"
+import Releases from "./components/dashboard/Releases";
+import IntegrationSettings from "./components/settings/IntegrationSettings";
 
 function App() {
   
@@ -19,6 +21,8 @@ function App() {
                     <Route path="/wizard" component={MainPage}></Route>
                     <Route path="/success" component={SuccessMessage}></Route>
                     <Route path="/appregister" component={AppRegistration}></Route> 
+                    <Route path="/releases" component={Releases}></Route>
+                    <Route path="/intsettings" component={IntegrationSettings}></Route>
                 </Switch>
             </Router>
 	  </>
