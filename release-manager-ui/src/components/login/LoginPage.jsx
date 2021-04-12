@@ -9,6 +9,7 @@ const LoginPage = () => {
         email: '',
         password: ''
     })
+    
     return (
         <div>
             <Layout>
