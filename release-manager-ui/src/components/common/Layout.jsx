@@ -8,12 +8,16 @@ import {useEffect, useState} from "react";
 // import LoginPage from "./components/login/LoginPage";
 import SideBar from '../sidebar/sidebar';
 import Header from '../header/header';
+import { ThemeContextConsumer } from '../contextApi/ThemeContext';
 
 function Layout(props) {
   const [show, setShow] = useState(false)
   
   return (
 	  <>
+	   <ThemeContextConsumer>
+            {context => (
+                <div className={`${context.theme}-theme`}>
 		<Row>
 		  <Col className={`sidebar bg-light ${!show ? 'hideSideBar' : 'showSideBar'}`}>
 			<SideBar />
@@ -28,6 +32,9 @@ function Layout(props) {
 			</Container>
 		  </Col>
 		</Row>
+		</div>
+            )}    
+        </ThemeContextConsumer>
 	  </>
   );
 }
