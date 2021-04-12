@@ -22,7 +22,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
             <div>
                 <h2>Release Manager</h2><br/>
             </div>
-              <div className="card"  style={{"width": "50rem", "margin": "0 auto"}}>
+            <div className="card"  style={{"width": "50rem", "margin": "0 auto"}}>
                 <div className="card-body">
                 <TextField 
                     id="application_id" 
@@ -32,6 +32,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.applicationId}
                     onChange={handleWizardChange}
                     style={styles}
+                    autoComplete ="off"
                 />
                 { errors.applicationId.length > 0 && <span className="error">{ errors.applicationId}</span>}
 
@@ -43,6 +44,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.applicationName}
                     onChange={handleWizardChange}
                     style={styles}
+                    autoComplete ="off"
                 />
                 {errors.applicationName.length > 0 && <span className="error">{errors.applicationName}</span>}
 
@@ -54,6 +56,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.releaseVersion}
                     onChange={handleWizardChange}
                     style={styles} 
+                    autoComplete ="off"
                 />
                 {errors.releaseVersion.length >0 && <span className="error">{errors.releaseVersion}</span>}
 
@@ -65,6 +68,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.releaseOwner}
                     onChange={handleWizardChange}
                     style={styles}
+                    autoComplete ="off"
                 />
                 {errors.releaseOwner.length > 0 && <span className="error">{errors.releaseOwner}</span>}
 
@@ -76,6 +80,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.devLead}
                     onChange={handleWizardChange}
                     style={styles}
+                    autoComplete ="off"
                 />
                  {errors.devLead.length > 0 && <span className ="error">{errors.devLead}</span>}
                
@@ -87,6 +92,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.testLead}
                     onChange={handleWizardChange}
                     style={styles}
+                    autoComplete ="off"
                 />
                  {errors.testLead.length > 0 && <span className="error">{errors.testLead}</span>}
 
@@ -98,6 +104,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     value={inputs.projectManager}
                     onChange={handleWizardChange}
                     style={styles}
+                    autoComplete ="off"
                 />
                  {errors.projectManager.length > 0 && <span className ="error">{errors.projectManager}</span>}
 
@@ -106,9 +113,9 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     <button className="btn btn-primary nextBtn"  onClick={handleAppRegistrationSubmit}>Register Application</button>
                 </div> 
 
-                </div>
+            </div>
           </div>
-          </Layout>
+        </Layout>
     </div>
        )
    }
