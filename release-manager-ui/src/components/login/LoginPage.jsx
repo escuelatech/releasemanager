@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../common/Layout';
 import useForm from '../customHook/useForm';
 import {Link} from 'react-router-dom';  
+import { ThemeContextConsumer } from '../contextApi/ThemeContext';
 
 const LoginPage = () => {
 
@@ -12,6 +13,9 @@ const LoginPage = () => {
     
     return (
         <div>
+            {/* <ThemeContextConsumer>
+            {context => (
+                <div className={`${context.theme}-theme`}> */}
             <Layout>
                 <br />
                 <div class="card"  style={{"width": "28rem", "margin": "0 auto"}}>
@@ -49,6 +53,9 @@ const LoginPage = () => {
                        <button type="submit" className="btn btn-success" onClick={handleAppRegistration}>Register Application Here</button>
                 </div>
             </Layout>
+            {/* </div>
+            )}    
+        </ThemeContextConsumer> */}
         </div>
     );
 };
