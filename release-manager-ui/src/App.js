@@ -9,6 +9,8 @@ import AppRegistration from "./components/appregistration/AppRegistrationPage.js
 import Settings from "./components/settings/SettingsPage.jsx";
 import Releases from "./components/dashboard/Releases";
 import IntegrationSettings from "./components/settings/IntegrationSettings";
+import DisplayProjects from "./components/projectconfiguration/DisplayProjectsPage.jsx"
+
 
 function App() {
   
@@ -25,6 +27,7 @@ function App() {
                     <Route path="/settings" component ={Settings}></Route>
                     <Route path="/releases" component={Releases}></Route>
                     <Route path="/intsettings" component={IntegrationSettings}></Route>
+                    <Route path="/displayproject" component={DisplayProjects}></Route>
                 </Switch>
             </Router>
 	  </>

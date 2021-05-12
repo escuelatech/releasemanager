@@ -20,7 +20,7 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
         <div>
             <Layout>
             <div>
-                <h2>Release Manager</h2><br/>
+                <h2>Register Application.</h2><br/>
             </div>
             <div className="card"  style={{"width": "50rem", "margin": "0 auto"}}>
                 <div className="card-body">

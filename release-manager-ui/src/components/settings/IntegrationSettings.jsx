@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {setState, useEffect } from 'react';
 import Layout from '../common/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faJira, faGithub, faJenkins } from '@fortawesome/free-brands-svg-icons'
 
-const IntegrationSettings = () => {
+const IntegrationSettings = (props) => {
+    
     return (
         <div>
             <Layout>
