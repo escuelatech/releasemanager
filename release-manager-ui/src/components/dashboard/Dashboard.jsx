@@ -18,6 +18,9 @@ const Dashboard = () => {
     const handleClick = () => {
         history.push('/releases');
     }
+    const handleProjectDisplay =()=>{
+        history.push('/displayproject');
+    }
 
     return (
         <div>
@@ -32,7 +35,7 @@ const Dashboard = () => {
                         </div>
                         
                     </div>
-                    <div className="widget">
+                    <div className="widget" onClick={handleProjectDisplay}>
                         <FontAwesomeIcon icon={faLaptop} size="5x" />
                         <div class="widget-main-content">
                             <p class="widget-title">Projects</p>
