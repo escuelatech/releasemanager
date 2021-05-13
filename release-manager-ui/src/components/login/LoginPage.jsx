@@ -18,7 +18,7 @@ const LoginPage = () => {
                 <div className={`${context.theme}-theme`}> */}
             <Layout>
                 <br />
-                <div class="card"  style={{"width": "28rem", "margin": "0 auto"}}>
+                <div class="card">
                     <h5 class="card-header">Login</h5>
                     <div class="card-body">
                         <form onSubmit={handleLoginSubmit}>
