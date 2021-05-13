@@ -23,22 +23,16 @@ function Header(props) {
 	  <ThemeContextConsumer>
 		{context => (
 		<Navbar  bg="light" expand="lg" className={"border-bottom"}>
-		  <Button variant="primary" onClick={() => props.setShow(p => !p)}>Toggle Menu</Button>
+		  <Button variant="primary" onClick={() => props.setShow(p => !p)}>Menu</Button>
 		  <Navbar.Toggle aria-controls="basic-navbar-nav"/>
 		  <Navbar.Collapse id="basic-navbar-nav">
 			<Nav className="ml-auto">
-			  <Nav.Link href="#home" className={"active"}>Home</Nav.Link>
-			  <Nav.Link href="#link">Link</Nav.Link>
-			  <NavDropdown title="Dropdown" id="basic-nav-dropdown" alignRight>
+			 <Link to='/dashboard'> <Nav.Link href="#home" className={"active"}>Dashboard</Nav.Link></Link>
+			 <Link><Nav.Link href="#link">Help</Nav.Link></Link> 
+			  <NavDropdown title="QuickLink" id="basic-nav-dropdown" alignRight>
 				<NavDropdown.Item href="#action/3.1"></NavDropdown.Item>
 				<NavDropdown.Item href="#action/3.2">
 				  Profile
-				</NavDropdown.Item>
-				<NavDropdown.Item href="#action/3.2">
-				  Project
-				</NavDropdown.Item>
-				<NavDropdown.Item href="#action/3.2">
-				  Dashboard
 				</NavDropdown.Item>
 				<NavDropdown.Item href="#action/3.2" onClick={context.toggleTheme}>
 						{context.theme === "light" ? "Dark Theme" : "Light Theme"}
@@ -49,9 +43,6 @@ function Header(props) {
 				</NavDropdown.Item>
 				<NavDropdown.Item href="#action/3.4" onClick={handleSettingsClick}>
 					Settings1
-				</NavDropdown.Item>
-				<NavDropdown.Item href="#action/3.4">
-				  Help
 				</NavDropdown.Item>
 				<NavDropdown.Item href="#action/3.4">
 				  Sign Out
