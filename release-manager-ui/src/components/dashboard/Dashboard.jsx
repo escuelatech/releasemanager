@@ -10,11 +10,6 @@ const Dashboard = () => {
 
     const history = useHistory();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        history.push("/wizard");
-    }
-
     const handleClick = () => {
         history.push('/releases');
     }
@@ -58,13 +53,13 @@ const Dashboard = () => {
                     </div>
                 </div>
                 
-                <div className="container">
+                {/* <div className="container">
                     <form onSubmit={handleSubmit}>
                         <h3>Welcome to The Release Manager</h3>
                         <p>To get started, please click on Create Release Manager.</p>
                         <button class="btn btn-primary">Create Release Manager</button>
                     </form>
-                </div>
+                </div> */}
             </Layout>
         </div>
     );
