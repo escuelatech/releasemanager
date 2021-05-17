@@ -44,9 +44,9 @@ function Header(props) {
 				<NavDropdown.Item href="#action/3.4" onClick={handleSettingsClick}>
 					Settings1
 				</NavDropdown.Item>
-				<NavDropdown.Item href="#action/3.4">
+				<Link to="/"><NavDropdown.Item href="#action/3.4">
 				  Sign Out
-				</NavDropdown.Item>
+				</NavDropdown.Item></Link>
 			  </NavDropdown>
 			</Nav>
 		  </Navbar.Collapse>

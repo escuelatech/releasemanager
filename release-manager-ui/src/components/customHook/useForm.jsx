@@ -14,7 +14,9 @@ const useForm = (initialValues) => {
         // releaseDate: '',
         devLead: '',
         testLead: '',
-        projectManager: ''
+        projectManager: '',
+        releaseLabel:'',
+        releaseDesc:''
     })
 
     let [step, setStep] = useState(1);
@@ -58,6 +60,8 @@ const useForm = (initialValues) => {
             devLead: inputs.devLead,
             testLead: inputs.testLead,
             projectManager: inputs.projectManager,
+            releaseLabel:inputs.releaseLabel,
+            releaseDesc:inputs.releaseDesc
         }
         console.log('App Registration details', appregistration);
     }
@@ -101,6 +105,12 @@ const useForm = (initialValues) => {
                 break;
             case 'projectManager':
                 setErrors({...errors, projectManager: value == "" ? 'Project Manager required' : ""});
+                break;
+            case 'releaseLabel':
+                setErrors({...errors, releaseLabel: value == "" ? 'Release Label required' : ""});
+                break;
+            case 'releaseDesc':
+                setErrors({...errors, releaseDesc: value == "" ? 'Release Description required' : ""});
                 break;
         }
         setInputs({...errors, ...inputs, [name]: value})

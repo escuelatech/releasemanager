@@ -13,7 +13,9 @@ const MainPage = () => {
         // releaseDate: '',
         devLead: '',
         testLead: '',
-        projectManager: ''
+        projectManager: '',
+        releaseLabel:'',
+        releaseDesc:''
     })
 
     const styles = {
