@@ -1,0 +1,343 @@
+.release-header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    margin-bottom: 2rem;
+}
+
+.release__container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.release__widgets {
+    width: 65%;
+}
+
+.release__widget > p {
+    margin-top: 10px;
+}
+
+.release__widget > button {
+    justify-content: flex-end;
+}
+
+.release__createRelease {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* margin: 2rem; */
+    background: rgb(250, 249, 249);
+    opacity: 1;
+}
+
+.release__createRelease:hover {
+    opacity: .8;
+}
+
+.release__createReleaseHeader {
+    margin: 3em auto;
+    text-align: center;
+    width: 50%;
+}
+
+.release__createReleaseHeader > h2 {
+    font-size: 2em;
+}
+
+.release__createRelease > img {
+    width: 60%;
+    object-fit: contain;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.release__info {
+    width: 98%;
+    background: rgb(250, 249, 249);
+    /* border-radius: 0 15px 15px 0; */
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-left: 5px solid #007bff; 
+}
+
+.release__widget__container {
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    /* margin-left: -10px; */
+    width: 100%;
+}
+
+.release__widget1 {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0px; */
+}
+
+
+
+.release__widget {
+    width: 100%;
+    background: rgb(250, 249, 249);
+    margin: 1em 0.5em;
+    height: 250px;
+    opacity: 1;
+    padding: 20px;
+    /* margin: 2em; */
+}
+
+.release__widget__container:first-child{
+    margin-bottom: 1em;
+}
+
+.release__widget:hover {
+    opacity: 0.8;
+}
+
+.release__widget__header {
+    display: flex;
+}
+
+.release__widget__header > h4 {
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.icon {
+    border: 1px solid transparent;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+    border-radius: 50%;
+    background: #e4f1fd;
+}
+
+.release__widget__icon {
+    color: #007bff;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* Release form */
+
+.releaseForm {
+    /* position: relative;
+    height: 100%; */
+    max-width: 800px;
+    padding: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #e4f1fd; */
+    background-color: rgb(250, 249, 249);
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.releaseForm > h4 {
+    color: black;
+    border-bottom: 1px solid #d9dcdd;
+    padding-bottom: 20px;
+}
+
+.card-body > h5 {
+    font-size: 1em;
+}
+
+.card-body > h5 > span {
+    font-weight: 400;
+}
+
+/* .releaseForm > form {
+    display: grid;
+    flex-direction: column;
+}
+
+.releaseForm > form > input {
+   
+    padding: 5px 15px;
+    outline-width: 0;
+    height: 40px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(250, 249, 249);
+} */
+
+.card-body {
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+}
+
+.card-body-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body1 {
+    width: 48%;
+}
+
+.success__message__header {
+    color: black;
+    padding: 3rem 3rem 1em 3rem;
+}
+.success__message__para {
+    color: black;
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 1400px) {
+    .release__container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .release__createRelease {
+        width: 98%;
+        max-width: 60%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+        border: none;
+    }
+
+    .release__createRelease > img {
+        width: 60%;
+        object-fit: contain;
+    }
+
+    .release__createReleaseHeader {
+        width: 75%;
+    }
+
+    .release__createReleaseHeader > h2 {
+        font-size: 1.5em;
+    }
+
+    .release__widgets {
+        margin: 0 auto;
+        width: 61%;
+    }
+
+    .release__widget > button {
+        justify-content: flex-end;
+    }
+
+    
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+@media (min-width: 1125px) {
+    .release__createReleaseHeader > h2 {
+        font-size: 1.75em;
+    }
+
+    .release__createRelease > img {
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 0;
+    }
+
+    .release__widget > button {
+       justify-content: flex-end;
+    }
+
+    .release__info {
+        width: 100%;
+    }
+
+    .releaseForm {
+        position: absolute;
+        top: 15%;
+        max-width: 900px;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1125px) {
+    .release__container {
+        width: 80%;
+    }
+
+    .release__widget1{
+        flex-direction: column;
+    }
+
+    .release__info {
+        width: 100%;
+    }
+
+    .releaseForm {
+        position: absolute;
+        top: 15%;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 800px) {
+    .release__container {
+        width: 80%;
+    }
+
+    .release__widget1{
+        flex-direction: column;
+    }
+
+    .release__widgets {
+        /* margin: 0 auto; */
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .release__createRelease {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 90%;
+        /* max-width: 400px; */
+    }
+
+    .card-body-container {
+        flex-direction: column;
+    }
+
+    .card-body1 {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .release__widget__header > h4 {
+        font-size: 1.08em;
+    }
+
+    .release__widget > p {
+        font-size: .9em;
+    }
+
+    
+}
