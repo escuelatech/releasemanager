@@ -33,7 +33,7 @@ function CreateRelease({onHide}) {
     useEffect(() => {
         if(show) {
             setTimeout(() => {
-                history.push('/releases')
+                onHide();
             }, 3000)
         }
         return () => clearTimeout()
@@ -49,7 +49,9 @@ function CreateRelease({onHide}) {
             releaseOwner: inputs.releaseName,
             devLead: inputs.devLead,
             testLead: inputs.testLead,
-            projectManager: inputs.projectManager
+            projectManager: inputs.projectManager,
+            releaseLabel:inputs.releaseLabel,
+            releaseDesc:inputs.releaseDesc
         }
         console.log("Appdetails", appDetails);
         setShow(true)
@@ -104,9 +106,7 @@ function CreateRelease({onHide}) {
                             style={styles}
                         />
                         {errors.releaseOwner.length > 0 && <span className="error">{errors.releaseOwner}</span>}
-                    </div>
-
-                    <div className="card-body1">
+                    
                         <TextField 
                             id="outlined-basic" 
                             label="Dev Lead" 
@@ -117,6 +117,9 @@ function CreateRelease({onHide}) {
                             style={styles}
                         />
                         {errors.devLead.length > 0 && <span className="error">{errors.devLead}</span>}
+                    </div>
+
+                    <div className="card-body1">
 
                         <TextField 
                             id="outlined-basic" 
@@ -139,6 +142,29 @@ function CreateRelease({onHide}) {
                             style={styles}
                         />
                         {errors.projectManager.length > 0 && <span className="error">{errors.projectManager}</span>}
+
+                        <TextField 
+                    id="outlined-basic" 
+                    label="Release Label" 
+                    variant="outlined"  
+                    name="releaseLabel" 
+                    value={inputs.releaseLabel}
+                    onChange={handleChange} 
+                    style={styles}
+                />
+                {errors.releaseLabel.length > 0 && <span className="error">{errors.releaseLabel}</span>}
+                
+                <TextField 
+                    id="outlined-basic" 
+                    label="Release Description" 
+                    variant="outlined"  
+                    name="releaseDesc" 
+                    value={inputs.releaseDesc}
+                    onChange={handleChange} 
+                    style={styles}
+                />
+                {errors.releaseDesc.length > 0 && <span className="error">{errors.releaseDesc}</span>}
+                    
                     </div>
                     </div>
                 <br />
@@ -152,8 +178,8 @@ function CreateRelease({onHide}) {
     const successMessage = 
         // <div className="card releaseForm success__message">
         <>
-            <h3 className="success__message__header">Release Manager has been successfully created.</h3>
-            <p className="success__message__para">You will be redirected to the Dashboard Shortly.</p>
+            <h3 className="success__message__header">A New Release has been successfully created.</h3>
+            {/* <p className="success__message__para">You will be redirected to the Dashboard Shortly.</p> */}
         </>
         // </div>
     
