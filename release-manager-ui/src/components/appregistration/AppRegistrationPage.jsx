@@ -14,6 +14,8 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
             devLead:'',
             testLead:'',
             projectManager:'',
+            releaseLabel:'',
+            releaseDesc:''
 })
 
     return(
@@ -107,6 +109,30 @@ const {inputs, handleWizardChange, handleAppRegistrationSubmit, cancelRegistrati
                     autoComplete ="off"
                 />
                  {errors.projectManager.length > 0 && <span className ="error">{errors.projectManager}</span>}
+{/* 
+                 <TextField 
+                    id="release_label" 
+                    label="Release Label"
+                    variant="outlined"  
+                    name="releaseLabel" 
+                    value={inputs.releaseLabel}
+                    onChange={handleWizardChange}
+                    style={styles}
+                    autoComplete ="off"
+                />
+                 {errors.releaseLabel.length > 0 && <span className ="error">{errors.releaseLabel}</span>} */}
+
+                 <TextField 
+                    id="release_desc" 
+                    label="Release Description"
+                    variant="outlined"  
+                    name="releaseDesc" 
+                    value={inputs.releaseDesc}
+                    onChange={handleWizardChange}
+                    style={styles}
+                    autoComplete ="off"
+                />
+                 {errors.releaseDesc.length > 0 && <span className ="error">{errors.releaseDesc}</span>}
 
                 <div className="btns">
                     <button className="btn prevBtn" onClick={cancelRegistration}>Cancel</button>            

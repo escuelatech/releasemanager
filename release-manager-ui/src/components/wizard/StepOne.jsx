@@ -17,7 +17,9 @@ const StepOne = ({inputs, handleChange, errors, nextStep, history, styles}) => {
             releaseOwner: inputs.releaseName,
             devLead: inputs.devLead,
             testLead: inputs.testLead,
-            projectManager: inputs.projectManager
+            projectManager: inputs.projectManager,
+            releaseLabel:inputs.releaseLabel,
+            releaseDesc:inputs.releaseDesc
         }
         console.log("Appdetails", appDetails);
         history.push('/success');
@@ -103,6 +105,28 @@ const StepOne = ({inputs, handleChange, errors, nextStep, history, styles}) => {
                     style={styles}
                 />
                 {errors.projectManager.length > 0 && <span className="error">{errors.projectManager}</span>}
+
+                <TextField 
+                    id="outlined-basic" 
+                    label="Release Label" 
+                    variant="outlined"  
+                    name="releaseLabel" 
+                    value={inputs.releaseLabel}
+                    onChange={handleChange} 
+                    style={styles}
+                />
+                {errors.releaseLabel.length > 0 && <span className="error">{errors.releaseLabel}</span>}
+                
+                <TextField 
+                    id="outlined-basic" 
+                    label="Release Description" 
+                    variant="outlined"  
+                    name="releaseDesc" 
+                    value={inputs.releaseDesc}
+                    onChange={handleChange} 
+                    style={styles}
+                />
+                {errors.releaseDesc.length > 0 && <span className="error">{errors.releaseDesc}</span>}
 
                 <div class="btns">
                     <button class="btn prevBtn" onClick={cancel}>Cancel</button>            
