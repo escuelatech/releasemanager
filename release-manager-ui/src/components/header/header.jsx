@@ -14,10 +14,7 @@ function Header(props) {
 	const handleSettingsClick = () => {
 		history.push('/intsettings');
 	}
-	const onClickSettings = () =>{
-		history.push('/settings');
-	}
-
+	
   return (
 	  <>
 	  <ThemeContextConsumer>
@@ -38,11 +35,8 @@ function Header(props) {
 						{context.theme === "light" ? "Dark Theme" : "Light Theme"}
 					</NavDropdown.Item>
 				<NavDropdown.Divider/>
-				<NavDropdown.Item href="#action/3.4" onClick={onClickSettings}>
-				  Settings
-				</NavDropdown.Item>
 				<NavDropdown.Item href="#action/3.4" onClick={handleSettingsClick}>
-					Settings1
+					Settings
 				</NavDropdown.Item>
 				<Link to="/"><NavDropdown.Item href="#action/3.4">
 				  Sign Out

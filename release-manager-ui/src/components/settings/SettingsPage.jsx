@@ -14,7 +14,8 @@ const Settings = () =>{
             <Layout>
              <div>
                 <h2>Release Manager</h2><br/>
-                <div className="card"  style={{"width": "60rem", "margin": "0 auto" }}>
+                <div className="profile-container">
+                <div className="card card-contains"  style={{"width": "60rem", "margin": "0 auto" }}>
                   <div className="card-body">
                    <h4>Project Profile</h4><br/>
                    <TextField 
@@ -48,18 +49,18 @@ const Settings = () =>{
                    
                    <div className="btns">
                    <button className="btn btn-primary nextBtn">Update Project Profile</button>
-                    {/* <button className="btn prevBtn">Cancel</button>             */}
                    </div> 
                  </div>
                 </div><br/>
 
-                <div className="card"  style={{"width": "60rem", "margin": "0 auto"}}>
+                <div className="card card-contains"  style={{"width": "60rem", "margin": "0 auto"}}>
                   <div className="card-body">
                   <h4>Appearance</h4>
                   <input type="radio" value="DarkTheme" name="theme" /> Dark Theme <br/>
                   <input type="radio" value="LightTheme" name="theme" /> Light Theme
                   </div>
                 </div>
+             </div>
              </div>
            </Layout>
         </div>
