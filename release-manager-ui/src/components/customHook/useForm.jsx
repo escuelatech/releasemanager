@@ -79,7 +79,7 @@ const useForm = (initialValues) => {
         setInputs({...errors, ...inputs, [name]: value})
     }
 
-    const handleWizardChange = (e) => {
+    const handleReleaseChange = (e) => {
         const {name, value} = e.target;
         switch(name) {
             case 'applicationId':
@@ -116,7 +116,7 @@ const useForm = (initialValues) => {
         setInputs({...errors, ...inputs, [name]: value})
     }
 
-    return {handleLoginChange, handleLoginSubmit, handleWizardChange, handleAppRegistration, handleAppRegistrationSubmit, cancelRegistration,inputs, errors, step, nextStep, prevStep, history,styles};
+    return {handleLoginChange, handleLoginSubmit, handleReleaseChange, handleAppRegistration, handleAppRegistrationSubmit, cancelRegistration,inputs, errors, step, nextStep, prevStep, history,styles};
 };
 
 export default useForm;
