@@ -12,6 +12,7 @@ import DisplayProjects from "./components/projectconfiguration/DisplayProjectsPa
 import ReleaseList from "./components/dashboard/release/ReleaseList";
 
 
+
 function App() {
   
   return (
@@ -23,7 +24,7 @@ function App() {
                     <Route path="/dashboard" component={Dashboard}></Route>
                     <Route path="/wizard" component={MainPage}></Route>
                     <Route path="/appregister" component={AppRegistration}></Route> 
-                    <Route path="/settings" component ={Settings}></Route>
+                    <Route path="/profilesettings" component ={Settings}></Route>
                     <Route path="/releases" component={Releases}></Route>
                     <Route path="/intsettings" component={IntegrationSettings}></Route>
                     <Route path="/displayproject" component={DisplayProjects}></Route>

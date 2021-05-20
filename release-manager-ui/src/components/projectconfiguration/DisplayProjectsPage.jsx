@@ -28,7 +28,7 @@ const DisplayProjects = () => {
             {projects && projects.map((project) => {
               return (
            <Card key={project.id} style={style}>
-           <Card.Body >
+           <Card.Body style={{"padding-bottom":"10px"}}>
            <Card.Title >{project.name}</Card.Title>
            <Card.Text>
              Some quick example text to build on the card title and make up the bulk of
