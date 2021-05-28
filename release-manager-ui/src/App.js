@@ -10,6 +10,7 @@ import Releases from "./components/dashboard/release/Releases";
 import IntegrationSettings from "./components/settings/IntegrationSettings";
 import DisplayProjects from "./components/projectconfiguration/DisplayProjectsPage.jsx"
 import ReleaseList from "./components/dashboard/release/ReleaseList";
+import CreateProject from "./components/projectconfiguration/CreateProject";
 
 function App() {
   
@@ -24,9 +25,12 @@ function App() {
                     <Route path="/appregister" component={AppRegistration}></Route> 
                     <Route path="/profilesettings" component ={Settings}></Route>
                     <Route path="/releases" component={Releases}></Route>
+                    <Route path="/settings" component ={Settings}></Route>
+                    <Route path="/releases/:name" component={Releases}></Route>
                     <Route path="/intsettings" component={IntegrationSettings}></Route>
                     <Route path="/displayproject" component={DisplayProjects}></Route>
                     <Route path="/releaselist" component={ReleaseList}></Route>
+                    <Route path="/createproject" component={CreateProject}></Route>
                 </Switch>
             </Router>
 	  </>

@@ -6,7 +6,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Layout from '../../common/Layout';
-import { useHistory } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import IssuesService from '../../../services/IssuesService';
 import axios from 'axios';
 import './Releases.css'
@@ -36,6 +36,7 @@ const Releases = () => {
     const history = useHistory();
     const [issues, setIssues] = useState([]);
     const [createRelease, setCreateRelease] = useState(false);
+    const {name} = useParams();
     // const [viewRelease, setViewRelease] = useState(false);
 
     // const handleClick = () => {
@@ -84,7 +85,7 @@ const Releases = () => {
                 <div className="release__container">
                     <div className="release__widgets">
                         <div className="release__info">
-                            <h2>Welcome</h2>
+                            <h2>{name}</h2>
                             <p>The project you have selected has 0 releases.</p>
                         </div>
                         <div className="release__widget__container">
