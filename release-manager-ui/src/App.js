@@ -11,8 +11,6 @@ import IntegrationSettings from "./components/settings/IntegrationSettings";
 import DisplayProjects from "./components/projectconfiguration/DisplayProjectsPage.jsx"
 import ReleaseList from "./components/dashboard/release/ReleaseList";
 
-
-
 function App() {
   
   return (
