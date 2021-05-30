@@ -172,6 +172,7 @@
 
 
 
+
 @media (max-width: 600px) and (min-width: 840px) {
   .container-widget {
     flex-direction: column;
@@ -289,6 +290,15 @@
     height: 300px;
    }
  
+/* .project__container {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 5em;
+  background-color: burlywood;
+} */
+
+
+
 
 
 

@@ -5,7 +5,7 @@ import ProjectService from '../../services/ProjectServices';
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card';
 import {Link} from 'react-router-dom'
-
+import './CreateProject.css'
 
 const DisplayProjects = () => {
   const history = useHistory();
@@ -14,31 +14,35 @@ const DisplayProjects = () => {
 
   useEffect(()=>{
     ProjectService.getAllProjects().then((response) =>{
-      // destructuring
-      const {data} = response.data;
-      setProjects(data);
+      console.log("inside useeffect", response.data)
+      setProjects(response.data);
     });
   },[])
+
+  console.log('projects', projects)
 
   return (
     <div>
       <Layout>
-        <h3>Projects in your account</h3>     
-        <div className="container-widget">
+        <h3>Projects in your account</h3> 
+       
+        <div className="display__projects__container">
             {projects && projects.map((project) => {
               return (
-           <Card key={project.id} style={style}>
-           <Card.Body style={{"padding-bottom":"10px"}}>
-           <Card.Title >{project.name}</Card.Title>
-           <Card.Text>
-             Some quick example text to build on the card title and make up the bulk of
-             the card's content.
-           </Card.Text>
-             <Link to = {'/releases'}><Button variant="primary">Release</Button></Link>
-          </Card.Body>
-          </Card>
-              );
-           })}
+                <div className="display__project">
+                  <Card key={project.id} style={style}>
+                    <Card.Body >
+                      <Card.Title >{project.projectName}</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                      </Card.Text>
+                      <Link to = {`/releases/${project.projectName}`}><Button variant="primary">Release</Button></Link>
+                    </Card.Body>
+                  </Card>
+                </div>
+                );
+            })}
          </div>   
        </Layout>
     </div>   

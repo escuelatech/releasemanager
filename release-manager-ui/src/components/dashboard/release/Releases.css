@@ -317,6 +317,10 @@
         margin: 0 auto;
     }
 
+    .release__createRelease > img {
+        width: 100%;
+    }
+
     .card {
         width: 90%;
         /* max-width: 400px; */

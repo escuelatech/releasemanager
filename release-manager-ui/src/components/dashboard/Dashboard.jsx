@@ -10,11 +10,11 @@ const Dashboard = () => {
 
     const history = useHistory();
 
-    const handleClick = () => {
-        history.push('/releases');
-    }
+    // const handleClick = () => {
+    //     history.push('/releases');
+    // }
     const handleProjectDisplay =()=>{
-        history.push('/displayproject');
+        history.push('/createproject');
     }
 
     return (
@@ -22,14 +22,13 @@ const Dashboard = () => {
             <Layout>
                 <h2>Dashboard</h2>
                 <div className="container-widget">
-                    <div className="widget" onClick={handleClick}>
+                    {/* <div className="widget" onClick={handleClick}>
                         <FontAwesomeIcon icon={faRocket} size="5x" />
                         <div class="widget-main-content">
                             <p class="widget-title">Releases</p>
                             <h3>2</h3>
                         </div>
-                        
-                    </div>
+                    </div> */}
                     <div className="widget" onClick={handleProjectDisplay}>
                         <FontAwesomeIcon icon={faLaptop} size="5x" />
                         <div class="widget-main-content">
