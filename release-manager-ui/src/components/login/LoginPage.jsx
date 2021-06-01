@@ -6,10 +6,11 @@ import { ThemeContextConsumer } from '../contextApi/ThemeContext';
 
 const LoginPage = () => {
 
-    const {inputs, errors, handleLoginChange, handleLoginSubmit,handleAppRegistration} = useForm({
+    const {inputs, errors, handleLoginChange, handleLoginSubmit,handleUserRegistration} = useForm({
         email: '',
         password: ''
     })
+
     
     return (
         <div>
@@ -50,7 +51,7 @@ const LoginPage = () => {
                             <button type="submit" class="btn btn-primary">Login</button>
                         </form>
                     </div><br />
-                       <button type="submit" className="btn btn-success" onClick={handleAppRegistration}>Register Application Here</button>
+                       <button type="submit" className="btn btn-success" onClick={handleUserRegistration}>User Registration</button>
                 </div>
             </Layout>
             {/* </div>
