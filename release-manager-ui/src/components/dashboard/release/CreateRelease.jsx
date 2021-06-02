@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import '../../../styles.css';
 import './Releases.css'
-import useForm from '../../customHook/useForm'
+import useForm from '../../customHook/useForm';
+import axios from "axios";
+import ReleaseServices from '../../../services/ReleaseServices';
 
 
 function CreateRelease({onHide}) {
@@ -16,7 +18,9 @@ function CreateRelease({onHide}) {
         // releaseDate: '',
         devLead: '',
         testLead: '',
-        projectManager: ''
+        projectManager: '',
+        releaseLabel:'',
+        releaseDesc:''
     })
 
     const styles = {
@@ -54,8 +58,13 @@ function CreateRelease({onHide}) {
             releaseDesc:inputs.releaseDesc
         }
         console.log("Appdetails", appDetails);
-        setShow(true)
-        // history.push('/success');
+        ReleaseServices.postReleases(appDetails).then(() =>{
+            // destructuring
+            // const {data} = response.data;
+            setShow(true);
+          });          
+     
+       
     }
 
     const createReleaseModal = 
@@ -72,6 +81,7 @@ function CreateRelease({onHide}) {
                             value={inputs.applicationName}
                             onChange={handleChange} 
                             style={styles}
+                            required
                         />
                         {errors.applicationName.length > 0 && <span className="error">{errors.applicationName}</span>}
                 
@@ -101,6 +111,8 @@ function CreateRelease({onHide}) {
                             label="Release Owner" 
                             variant="outlined"  
                             name="releaseOwner" 
+                            // required
+                            // class=" form-validation-error"
                             value={inputs.releaseOwner}
                             onChange={handleChange} 
                             style={styles}
