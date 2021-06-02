@@ -3,10 +3,15 @@ const GET_PROJECT_ISSUES = 'jira/getall/issues?project=Cakify-app&labels=test-re
 const GET_PROJECTS = "project/getall";
 const CREATE_PROJECT = "project/register";
 // const GET_PROJECT_ISSUES = `jira/getall/issues?project=${project}&labels=${label}`;
+const GET_PROJECT_NAMES ="project/getall";
+const POST_USER_DETAILS = "user/register";
+
 
 export default {
     GET_PROJECTS,
     GET_PROJECT_ISSUES,
     GET_JIRA_ISSUES, 
-    CREATE_PROJECT
+    CREATE_PROJECT,
+    GET_PROJECT_NAMES,
+    POST_USER_DETAILS
 }

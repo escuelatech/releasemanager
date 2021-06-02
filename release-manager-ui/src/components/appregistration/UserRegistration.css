@@ -1,0 +1,23 @@
+.card-contains {
+    /* width: 28rem;  */
+    margin: 0 auto;
+    box-shadow: 5px 10px 18px #888888;
+    border: none;
+    width:50rem;
+    margin:0 auto;
+}
+.btnClass {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+   width:100%;
+  }
+
+@media (max-width: 1164px) {
+
+    .card-contains{
+        width:100%;
+    }
+    
+}
+

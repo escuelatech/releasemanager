@@ -16,7 +16,10 @@ const useForm = (initialValues) => {
         testLead: '',
         projectManager: '',
         releaseLabel:'',
-        releaseDesc:''
+        releaseDesc:'',
+        employeeEmail:'',
+        employeeId:'',
+        projectName:'value',
     })
 
     let [step, setStep] = useState(1);
@@ -50,6 +53,12 @@ const useForm = (initialValues) => {
         e.preventDefault();
         history.push('/appregister');
     }
+
+    const handleUserRegistration = (e) => {
+        e.preventDefault();
+        history.push('/userregister');
+    }
+
     const handleAppRegistrationSubmit= (e) => {
         e.preventDefault();
         const appregistration = {
@@ -70,7 +79,7 @@ const useForm = (initialValues) => {
         const {name, value} = e.target;
         switch(name) {
             case 'email':
-                setErrors({...errors, email: value == "" ? 'Email Required' : ""});
+                setErrors({...errors, email: value == "" ? (styles={"borderColor":"red"}): ""});
                 break;
             case 'password':
                 setErrors({...errors, password: value == "" ? 'Password required' : ""});
@@ -78,6 +87,20 @@ const useForm = (initialValues) => {
         }
         setInputs({...errors, ...inputs, [name]: value})
     }
+
+    const handleuserRegistrationChange=(e) =>{
+        const {name,value} =e.target;
+        switch(name) {
+            case 'employeeEmail':
+                setErrors({...errors,employeeEmail: value == "" ? 'Email Required':''});
+                   break;
+            case 'employeeId':
+                   setErrors({...errors,employeeId: value =="" ? 'Employee ID Required':''});
+            case 'projectName':
+                   setErrors({...errors,projectName:value=="" ?'Select your project':'' })
+        } 
+        setInputs({...errors, ...inputs, [name]: value})
+        }
 
     const handleReleaseChange = (e) => {
         const {name, value} = e.target;
@@ -116,7 +139,7 @@ const useForm = (initialValues) => {
         setInputs({...errors, ...inputs, [name]: value})
     }
 
-    return {handleLoginChange, handleLoginSubmit, handleReleaseChange, handleAppRegistration, handleAppRegistrationSubmit, cancelRegistration,inputs, errors, step, nextStep, prevStep, history,styles};
+    return {handleLoginChange, handleLoginSubmit, handleReleaseChange, handleAppRegistration, handleAppRegistrationSubmit, cancelRegistration,inputs, errors, step, nextStep, prevStep, history,styles,handleUserRegistration,handleuserRegistrationChange};
 };
 
 export default useForm;

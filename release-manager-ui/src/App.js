@@ -11,6 +11,9 @@ import IntegrationSettings from "./components/settings/IntegrationSettings";
 import DisplayProjects from "./components/projectconfiguration/DisplayProjectsPage.jsx"
 import ReleaseList from "./components/dashboard/release/ReleaseList";
 import CreateProject from "./components/projectconfiguration/CreateProject";
+import UserRegistration from "./components/appregistration/UserRegistrationPage.jsx"
+
+
 
 function App() {
   
@@ -31,6 +34,8 @@ function App() {
                     <Route path="/displayproject" component={DisplayProjects}></Route>
                     <Route path="/releaselist" component={ReleaseList}></Route>
                     <Route path="/createproject" component={CreateProject}></Route>
+                    <Route path="/userregister" component={UserRegistration}></Route>
+                    <Route></Route>
                 </Switch>
             </Router>
 	  </>
