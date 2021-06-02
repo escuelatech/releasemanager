@@ -193,6 +193,11 @@
     width: 48%;
 }
 
+input:required {
+    border:1px solid red;
+  }
+
+
 .success__message__header {
     color: black;
     padding: 3rem 3rem 1em 3rem;
@@ -267,31 +272,9 @@
     }
 
     .releaseForm {
-        position: absolute;
+        position: fixed;
         top: 15%;
         max-width: 900px;
-    }
-}
-
-/* ///////////////////////////////////////////////////////////////////////////////////// */
-
-@media (max-width: 1125px) {
-    .release__container {
-        width: 80%;
-    }
-
-    .release__widget1{
-        flex-direction: column;
-    }
-
-    .release__info {
-        width: 100%;
-    }
-
-    .releaseForm {
-        position: absolute;
-        top: 15%;
-        max-width: 700px;
     }
 }
 
@@ -344,4 +327,26 @@
     }
 
     
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1125px) {
+    .release__container {
+        width: 80%;
+    }
+
+    .release__widget1{
+        flex-direction: column;
+    }
+
+    .release__info {
+        width: 100%;
+    }
+
+    .releaseForm {
+        position: fixed;
+        top: 15%;
+        max-width: 700px;
+    }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import '../../styles.css';
+import axios from 'axios';
 
 const StepOne = ({inputs, handleChange, errors, nextStep, history, styles}) => {
 
@@ -22,7 +23,10 @@ const StepOne = ({inputs, handleChange, errors, nextStep, history, styles}) => {
             releaseDesc:inputs.releaseDesc
         }
         console.log("Appdetails", appDetails);
-        history.push('/success');
+       
+        
+       
+        
     }
 
     return (
