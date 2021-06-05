@@ -96,8 +96,10 @@ const useForm = (initialValues) => {
                    break;
             case 'employeeId':
                    setErrors({...errors,employeeId: value =="" ? 'Employee ID Required':''});
+                   break;
             case 'projectName':
                    setErrors({...errors,projectName:value=="" ?'Select your project':'' })
+                   break;
         } 
         setInputs({...errors, ...inputs, [name]: value})
         }

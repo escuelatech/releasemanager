@@ -13,8 +13,6 @@ import ReleaseList from "./components/dashboard/release/ReleaseList";
 import CreateProject from "./components/projectconfiguration/CreateProject";
 import UserRegistration from "./components/appregistration/UserRegistrationPage.jsx"
 
-
-
 function App() {
   
   return (
@@ -28,7 +26,7 @@ function App() {
                     <Route path="/appregister" component={AppRegistration}></Route> 
                     <Route path="/profilesettings" component ={Settings}></Route>
                     <Route path="/releases" component={Releases}></Route>
-                    <Route path="/settings" component ={Settings}></Route>
+                    {/* <Route path="/settings" component ={Settings}></Route> */}
                     <Route path="/releases/:name" component={Releases}></Route>
                     <Route path="/intsettings" component={IntegrationSettings}></Route>
                     <Route path="/displayproject" component={DisplayProjects}></Route>
