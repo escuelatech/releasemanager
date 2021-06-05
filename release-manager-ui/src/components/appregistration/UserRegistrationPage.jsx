@@ -5,10 +5,8 @@ import useForm from '../customHook/useForm';
 import { useHistory } from 'react-router';
 import Autocomplete from "@material-ui/lab/Autocomplete"
 import UserService from "../../services/UserService";
-// import ProjectService from "../../services/ProjectServices.jsx";
 import './UserRegistration.css';
 import {Link} from 'react-router-dom';
-// import { CollectionsOutlined } from '@material-ui/icons';
 
 
 const UserRegistration = () =>{
@@ -16,10 +14,9 @@ const UserRegistration = () =>{
     const [value,setValue] = useState("");
     const history = useHistory();
     const [projects, setProjects] = useState([]);  
-    const [responsestatus,setResponsestatus] = useState(""); 
     const successMessage="Registration completed Successfully";
 
-    const {inputs,handleReleaseChange, errors, styles, handleuserRegistrationChange} = useForm ({
+    const {inputs,errors, styles, handleuserRegistrationChange} = useForm ({
         employeeEmail: '',
         employeeId: '',
         projectsName : 'value',
@@ -55,7 +52,10 @@ const handleSubmit = (e) =>{
             setShow(true);    
         }).catch(error => console.log('Error', error))
 }
- console.log(value)
+const triggerChange = (event,value) =>{
+       value === null ? setValue(null) : setValue(value.projectName)
+}
+
       return(
         <Layout>
             {!show ?<div>
@@ -83,22 +83,21 @@ const handleSubmit = (e) =>{
                          style={styles}
                          autoComplete ="off"
                      />
+                     { errors.employeeId.length > 0 && <span className="error">{ errors.employeeId}</span>}
                        <Autocomplete
                              id = "id"
                              options={projects}
                              getOptionLabel= {(option)=> option.projectName}
-                             onChange={(e, v) => setValue(v.projectName)}   
+                             onChange={triggerChange}  
                              renderInput={(params) => <TextField {...params}  label="Project Name"                          
                              variant="outlined" />}
                        /> 
                         <br/>
-                         {/* <div className="btns">  */}
                          <Link to={'/'}><button className="btn prevBtn " > Cancel</button></Link>       
                          <button className="btn btn-primary nextBtn " 
                          onClick={handleSubmit} 
                         >Register
                          </button>
-                        {/* </div> */}
                    </div>
                  </div>
                   </div>:

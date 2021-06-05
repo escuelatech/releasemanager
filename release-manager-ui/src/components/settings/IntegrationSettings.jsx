@@ -2,25 +2,27 @@ import React, {setState, useEffect,useState } from 'react';
 import Layout from '../common/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faJira, faGithub, faJenkins } from '@fortawesome/free-brands-svg-icons'
+import Settings from "../../components/settings/SettingsPage.jsx"
 
-import {Link} from 'react-router-dom'
-import { useHistory } from 'react-router'
-
-const IntegrationSettings = (props) => {
+const IntegrationSettings = () => {
     const [showintegration,setShowintegration] = useState(false);
     const [showdescription,setShowdecription] = useState(true);
-    const history = useHistory();
+    const [showProfile,setShowProfile] = useState(false);
 
     const showHide = () => {
         setShowintegration(true);
-        
+        setShowProfile(false);     
     }
 
     const description = () =>{
         setShowdecription(false);
+        setShowProfile(false);
     }
-    const handleClick = () => {
-      history.push('/profilesettings');
+
+    const Profile=() => {
+        setShowintegration(false);
+        setShowdecription(false);
+        setShowProfile(true);
     }
     
     return (
@@ -31,7 +33,7 @@ const IntegrationSettings = (props) => {
                         <div className="border-right" id="sidebar-wrapper">
                             <div className="sidebar-heading">Settings</div>
                                 <div className="list-group list-group-flush">
-                                <a href="#" className="list-group-item list-group-item-action bg-light" onClick={handleClick}>Profile</a>
+                                <a href="#" className="list-group-item list-group-item-action bg-light" onClick={Profile}>Profile</a>
                                 <a href="#" className="list-group-item list-group-item-action bg-light" onClick={()=>{showHide();description()}}>Integrations</a>
                                 {/* <a href="#" className="list-group-item list-group-item-action bg-light">Overview</a>
                                 <a href="#" className="list-group-item list-group-item-action bg-light">Events</a>
@@ -39,7 +41,13 @@ const IntegrationSettings = (props) => {
                                 <a href="#" className="list-group-item list-group-item-action bg-light">Status</a> */}
                             </div>
                         </div>
-                    </div><br/>
+                    </div>   
+                    <br/>
+
+                        <div className="container-widget">
+                           {showProfile? <Settings/>:null}
+                        </div>
+
                         {showdescription?<div className="description-container">
                         <div className = "sidebar-description">               
                             <img src="SystemIntegration.jpg" alt="" className="image" />  
@@ -48,12 +56,12 @@ const IntegrationSettings = (props) => {
                               As a Project Manager or as a Developer you know that we need different types of software together to accomplish many important task related to  your project.Here you can integrate your different projects thats in your account  to a various services like Jira,GitHub and Jenkins.As a Project Manager or as a Developer you know that we need different types of software together to accomplish many important task related to  your project.Here you can integrate your different projects thats in your account  to a various services like Jira,GitHub and Jenkins.As a Project Manager or as a Developer you know that we need different types of software together to accomplish many important task related to  your project.Here you can integrate your different projects thats in your account  to a various services like Jira,GitHub and Jenkins.</p>    
                         </div>   
                      </div>:null}
-                    </div> <br/>                                      
+                    </div> <br/>  
+                                                        
                       { showintegration ?<div className="container-widget">      
                       <div className="container-body">
                           <h2 className="settings-heading">Get Started with Integrations</h2>
                           <h4 className="settings-subheading">Integrate your project with various services</h4>
-                          {/* <Link to ="/dashboard"><button className="btn btn-primary align-right ">Cancel</button></Link> */}
                           <div className="integration-group">
                             <div className="integration-container">
                                 <FontAwesomeIcon icon={faJira} size="2x" />

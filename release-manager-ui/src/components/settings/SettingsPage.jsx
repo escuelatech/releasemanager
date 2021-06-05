@@ -3,17 +3,13 @@ import Layout from '../common/Layout';
 import TextField from '@material-ui/core/TextField';
 
 const Settings = () =>{
-
     const styles = {
         width: '100%',
         marginBottom: '10px'
     }
 
     return(
-        <div>
-            <Layout>
-             <div>
-                <h2>Release Manager</h2><br/>
+        <div>      
                 <div className="profile-container">
                 <div className="card card-contains"  style={{"width": "60rem", "margin": "0 auto" }}>
                   <div className="card-body">
@@ -61,8 +57,6 @@ const Settings = () =>{
                   </div>
                 </div>
              </div>
-             </div>
-           </Layout>
         </div>
     )
 
