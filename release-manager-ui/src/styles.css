@@ -12,7 +12,7 @@
 }
 
 .large-container {
-  width: 90%;
+  width: 100%;
   /* height: 90%; */
   /* background: cadetblue; */
   margin: 4em auto;
@@ -21,8 +21,12 @@
 }
 
 .sidebar-container {
-  width: 20%;
-  /* height: 100%; */
+  width: 25%;
+  background-color: white;
+  height: 10vh;
+  border-top: 1px solid rgb(228, 228, 228);
+  border-left: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
 }
 
 .container-body {
@@ -68,6 +72,7 @@
 
 .container-widget {
   display: flex;
+
   /* flex-direction: column;  */
   /* margin: 0 auto; */
   justify-content: space-between;
@@ -149,7 +154,7 @@
   color: whitesmoke;
 }
 
-.integration-group {
+/* .integration-group {
   margin: 4em;
   display: flex;
   flex-wrap: column wrap;
@@ -164,11 +169,11 @@
   padding: 2em;
   background: rgb(238, 238, 238);
   margin-top: -40px;
-}
+} */
 
-.btn-integrate {
+/* .btn-integrate {
   padding: 0.5em;
-}
+} */
 
 
 
@@ -201,25 +206,29 @@
     align-items: center;
    
   }
-  .integration-group{
+  /* .integration-group{
     flex-direction: column;
     width:100%;
     margin-left: 85px;
     margin-top: 80px;
-  }
+  } */
   .sidebar-container{
     flex-direction: column;
     width:100%;
+   
    }
  
    .sidebar-wrapper{
     flex-direction: column;
+    
   }
   .sidebar-heading{
       align-items: center;
       text-align: left;
+      
+      /* background-color: #f8f9fa; */
   }
-  .integration-container{
+  /* .integration-container{
     flex-direction: column;
     align-items: center;
     text-align: left;
@@ -227,12 +236,15 @@
     margin-left: -70px;
     margin-right:-20px; 
     margin-bottom:70px; 
-    }
+    } */
 
     .description-container{
-      width: 100%;
-      margin-left: -50px;
-      padding-right:8px;
+      width: 70%;
+      /* background-color: red;
+      color: blue; */
+      margin: 2em;
+      /* margin-left: -50px; */
+      /* padding-right:8px; */
     }
 
     .sidebar-description{
@@ -270,15 +282,15 @@
     }
 
   }
- 
+/*  
  .sidebar-description {
   flex-wrap: column wrap;
-  width:80%px;
+  width:80%;
   margin-top: 0px;
   margin-left:50px;
   padding: 2em;
   background: rgb(238, 238, 238); 
-}
+} */
 
 .profile-container{
   flex-direction: column;

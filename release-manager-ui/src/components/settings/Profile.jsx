@@ -1,17 +1,25 @@
 import React from 'react';
-import Layout from '../common/Layout';
+import Settings from './Settings' 
 import TextField from '@material-ui/core/TextField';
 
-const Settings = () =>{
+function Profile(props) {
+
     const styles = {
         width: '100%',
         marginBottom: '10px'
     }
 
-    return(
-        <div>      
-                <div className="profile-container">
-                <div className="card card-contains"  style={{"width": "60rem", "margin": "0 auto" }}>
+    const pStyles = {
+        color: 'gray',
+        fontSize: '.8em',
+        marginTop: '-.8em'
+    }
+
+    return (
+        <>
+            <Settings>
+            
+                <div className="card settings__card">
                   <div className="card-body">
                    <h4>Project Profile</h4><br/>
                    <TextField 
@@ -22,7 +30,7 @@ const Settings = () =>{
                     style={styles}
                     autoComplete ="off"
                    />
-                   <label>Project Name will be use only inside this application. </label>
+                   <p style={pStyles}>Project Name will be use only inside this application. </p>
 
                    <TextField 
                     id="company_Email" 
@@ -32,7 +40,8 @@ const Settings = () =>{
                     style={styles}
                     autoComplete ="off"
                    />
-                    <label>We can use it for any further communication if needed.</label>
+                    <p  style={pStyles}>We can use it for any further communication if needed.</p>
+                    
                     <TextField 
                     id="company_Name" 
                     label="Company Name" 
@@ -41,25 +50,26 @@ const Settings = () =>{
                     style={styles}
                     autoComplete ="off"
                    />
-                    <label>All the above information can be delete/remove at any point of time.Information will be used when the project is logged in.All this info will be safe and protected.</label>
+                    <p  style={pStyles}>All the above information can be delete/remove at any point of time. Information will be used when the project is logged in. All this info will be safe and protected.</p>
                    
                    <div className="btns">
-                   <button className="btn btn-primary nextBtn">Update Project Profile</button>
+                   <button className="btn btn-primary nextBtn" style={{width:"100%"}}>Update Project Profile</button>
                    </div> 
                  </div>
                 </div><br/>
 
-                <div className="card card-contains"  style={{"width": "60rem", "margin": "0 auto"}}>
+                <div className="card settings__card">
                   <div className="card-body">
                   <h4>Appearance</h4>
                   <input type="radio" value="DarkTheme" name="theme" /> Dark Theme <br/>
                   <input type="radio" value="LightTheme" name="theme" /> Light Theme
                   </div>
                 </div>
-             </div>
-        </div>
-    )
-
+             
+            </Settings> 
+           
+        </>
+    );
 }
 
-export default Settings;
+export default Profile;

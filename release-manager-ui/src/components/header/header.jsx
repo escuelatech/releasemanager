@@ -12,7 +12,7 @@ function Header(props) {
 
 	const history = useHistory();
 	const handleSettingsClick = () => {
-		history.push('/intsettings');
+		history.push('/settings');
 	}
 	
   return (
@@ -27,18 +27,18 @@ function Header(props) {
 			 <Link to='/dashboard'> <Nav.Link href="#home" className={"active"}>Dashboard</Nav.Link></Link>
 			 <Link><Nav.Link href="#link">Help</Nav.Link></Link> 
 			  <NavDropdown title="QuickLink" id="basic-nav-dropdown" alignRight>
-				<NavDropdown.Item href="#action/3.1"></NavDropdown.Item>
-				<NavDropdown.Item href="#action/3.2">
+				<NavDropdown.Item></NavDropdown.Item>
+				<NavDropdown.Item>
 				  Profile
 				</NavDropdown.Item>
-				<NavDropdown.Item href="#action/3.2" onClick={context.toggleTheme}>
+				<NavDropdown.Item onClick={context.toggleTheme}>
 						{context.theme === "light" ? "Dark Theme" : "Light Theme"}
 					</NavDropdown.Item>
 				<NavDropdown.Divider/>
-				<NavDropdown.Item href="#action/3.4" onClick={handleSettingsClick}>
+				<NavDropdown.Item onClick={handleSettingsClick}>
 					Settings
 				</NavDropdown.Item>
-				<Link to="/"><NavDropdown.Item href="#action/3.4">
+				<Link to="/"><NavDropdown.Item>
 				  Sign Out
 				</NavDropdown.Item></Link>
 			  </NavDropdown>
